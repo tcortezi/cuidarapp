@@ -1,30 +1,384 @@
-<nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
-  <div class="flex items-center flex-shrink-0 text-white mr-6">
-    <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg>
-    <span class="font-semibold text-xl tracking-tight">Tailwind CSS</span>
-  </div>
-  <div class="block lg:hidden">
-    <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
-      <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-    </button>
-  </div>
-  <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-    <div class="text-sm lg:flex-grow">
-      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-        Docs
-      </a>
-      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-        Examples
-      </a>
-      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
-        Blog
-      </a>
+<header class="z-0 relative">
+  <div class="container lg:mx-auto">
+    <div class="z-20 absolute container bg-transparent px-4">
+      <nav class="flex items-center justify-between flex-wrap pt-6">
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+          <%= image_tag "logoClean.svg", size:"90", class: "hidden lg:block" %>
+          <%= image_tag "logoCleanLight.svg", size:"90", class: "w-16 lg:hidden" %>
+        </div>
+        <div class="flex-grow flex items-center w-auto hidden lg:block">
+          <div class="text-sm lg:flex-grow">
+            <a class="block mt-4 inline-block mt-0 text-gray-600 hover:text-blue-400 mr-4 cursor-pointer" id="linkToAbout">
+              Sobre
+            </a>
+            <a class="block mt-4 inline-block mt-0 text-gray-600 hover:text-blue-400 mr-4 cursor-pointer" id="linkToTeam">
+              Profissionais
+            </a>
+            <a class="block mt-4 inline-block mt-0 text-gray-600 hover:text-blue-400 mr-4 cursor-pointer" id="linkToAmbient">
+              Estrutura
+            </a>
+            <a class="block mt-4 inline-block mt-0 text-gray-600 hover:text-blue-400 mr-4 cursor-pointer" id="linkToContact">
+              Contato
+            </a>
+          </div>
+        </div>
+      </nav>
     </div>
-    <div>
-      <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Download</a>
+  </div>
+  <div class="videoBg">
+    <div class="w-full lg:hidden">
+      <%= video_tag "bgMobile.webm", type: "video/webm", controls: false, autoplay: true, loop: true, playsinline: true, preload: "auto", muted: "muted", class: "w-full vidHeight object-cover" %>
+    </div>
+    <div class="container mx-auto overflow-hidden">
+      <div class="z-10 relative float-right hidden lg:block w-1/2">
+        <%= video_tag "bg.webm", type: "video/webm", controls: false, autoplay: true, loop: true, playsinline: true, preload: "auto", muted: "muted", class: "float-right" %>
+      </div>
     </div>
   </div>
-</nav>
+</header>
 
 
-<br />
+<div class="container mx-auto">
+  <div class="z-20 absolute container overflow-hidden top-0 mt-32 lg:mt-40">
+    <div class="flex">
+      <div class="w-full lg:w-1/2 lg:ml-1 text-center lg:text-left px-4">
+        <h1 class="font-bold lg:font-extrabold text-2xl leading-none tracking-wide headline">Um Novo Jeito de Cuidar de Você</h1>
+        <p class="font-light text-sm lg:text-lg text-gray-200 lg:text-gray-600 tracking-wide pt-2 lg:pr-10">
+          Saúde, prevenção, reabilitação e reintegração são as palavras que nos guiam dia após dia.
+        </p>
+      </div>
+    </div>
+    <div class="flex">
+      <div class="w-full lg:w-1/2 pt-8 text-center lg:text-left mt-4 lg:mt-0 px-4">
+        <button class="mainBtn bg-blue-500 lg:bg-transparent hover:bg-blue-500 text-white lg:text-blue-700 font-semibold hover:text-white py-4 px-8 lg:border border-white lg:border-blue-500 hover:border-transparent rounded-full shadow-md mb-4">
+          Assista o Vídeo
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container lg:mx-auto mt-30 md:mt-40" id="About">
+  <div class="px-4 flex flex-wrap mt-10 md:mt-0">
+    <div class="w-full lg:w-1/2 lg:pr-16 order-last lg:order-first mt-12 lg:mt-0">
+      <h2 class="font-bold text-3xl text-gray-800">Sobre a Cuidar</h2>
+      <p class="font-light text-gray-500">O Melhor Lugar para Cuidar de Você</p>
+      <p class="mt-10 font-light text-gray-600">
+        Todo ano surgem novos tratamentos e tecnologias medicinais, o que impressiona e aumenta a expectativa de vida. Porém, a forma que as clínicas atendem seus pacientes continua a mesma. Visita, diagnóstico, receita e repete. <br />A <strong>Cuidar</strong> foi criada com o propósito de evoluir esse modelo tradicional para uma forma mais moderna. Com uma equipe multidisciplinar, nosso desafio é entregar o que incluímos em nosso logo: Saúde, prevenção, reabilitação e reintegração.
+      </p>
+    </div>
+    <div class="w-full lg:w-1/2 lg:pl-16 mb-12 md:mb-0">
+      <div class="flex flex-col lg:flex-row lg:pt-4">
+        <div class="flex-1 p-6 bgCuidar roundTopLeft mr-1 mb-1">
+          <%= image_tag "icon/time.svg", class: "w-16 mx-auto" %>
+          <p class="text-gray-600 text-center font-bold">Equipe Multidisciplinar</p>
+        </div>
+        <div class="flex-1 p-6 bgCuidar roundTopRight ml-1 mb-1">
+          <%= image_tag "icon/ciclo.svg", class: "w-16 mx-auto" %>
+          <p class="text-gray-600 text-center font-bold">Tratamento Contínuo</p>
+        </div>
+      </div>
+      <div class="flex flex-col lg:flex-row">
+        <div class="flex-1 p-6 bgCuidar roundBotLeft mr-1 mt-1">
+          <%= image_tag "icon/estrutura.svg", class: "w-16 mx-auto" %>
+          <p class="text-gray-600 text-center font-bold">Estrutura de Qualidade</p>
+        </div>
+        <div class="flex-1 p-6 bgCuidar roundBotRight ml-1 mt-1">
+          <%= image_tag "icon/medico.svg", class: "w-16 mx-auto" %>
+          <p class="text-gray-600 text-center font-bold">+10 Especialidades</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="z-0 relative">
+  <div class="container lg:mx-auto mt-32 md:mt-40 relative z-20" id="Team">
+    <div class="flex flex-wrap px-4 mt-10 md:mt-0">
+      <div class="w-full">
+        <div class="lg:text-center">
+          <h2 class="font-bold text-3xl text-gray-800">Nossos Profissionais</h2>
+          <p class="font-light text-gray-500">Sempre a Sua Disposição</p>
+        </div>
+
+        <div class="flex flex-col lg:flex-row mt-10">
+          <div class="flex flex-1 p-2 teamMinHeight items-center justify-center">
+            <div class="teamWrap relative">
+              <div class="teamData mx-auto text-center rounded-b-lg">
+                <p class="text-blue-700 font-bold">Walter Gouvêa</p>
+                <p class="text-gray-800 font-normal">Nefrologia</p>
+              </div>
+              <%= image_tag "team/walter.jpg", class: "team mx-auto rounded-lg" %>
+            </div>
+          </div>
+          <div class="flex flex-1 p-2 teamMinHeight items-center justify-center">
+            <div class="teamWrap relative">
+              <div class="teamData mx-auto text-center rounded-b-lg">
+                <p class="text-blue-700 font-bold">Andre Gouvêa</p>
+                <p class="text-gray-800 font-normal">Nefrologia</p>
+              </div>
+              <%= image_tag "team/andregouvea.jpg", class: "team mx-auto rounded-lg" %>
+            </div>
+          </div>
+          <div class="flex flex-1 p-2 teamMinHeight items-center justify-center">
+            <div class="teamWrap relative">
+              <div class="teamData mx-auto text-center rounded-b-lg">
+                <p class="text-blue-700 font-bold">Armando P. Carreiro</p>
+                <p class="text-gray-800 font-normal">Cirurgia Geral</p>
+              </div>
+              <%= image_tag "team/armando.jpg", class: "team mx-auto rounded-lg" %>
+            </div>
+          </div>
+          <div class="flex flex-1 p-2 teamMinHeight items-center justify-center">
+            <div class="teamWrap relative">
+              <div class="teamData mx-auto text-center rounded-b-lg">
+                <p class="text-blue-700 font-bold">Eduardo Rocha</p>
+                <p class="text-gray-800 font-normal">Nefrologia</p>
+              </div>
+              <%= image_tag "team/eduardo.jpg", class: "team mx-auto rounded-lg" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row">
+          <div class="flex flex-1 p-2 teamMinHeight items-center justify-center">
+            <div class="teamWrap relative">
+              <div class="teamData mx-auto text-center rounded-b-lg">
+                <p class="text-blue-700 font-bold">Haline D. Pereira</p>
+                <p class="text-gray-800 font-normal">Nutricionista</p>
+              </div>
+              <%= image_tag "team/haline.jpg", class: "team mx-auto rounded-lg" %>
+            </div>
+          </div>
+          <div class="flex flex-1 p-2 teamMinHeight items-center justify-center">
+            <div class="teamWrap relative">
+              <div class="teamData mx-auto text-center rounded-b-lg">
+                <p class="text-blue-700 font-bold">Henrique W. Besser</p>
+                <p class="text-gray-800 font-normal">Cardiologia</p>
+              </div>
+              <%= image_tag "team/henrique.jpg", class: "team mx-auto rounded-lg" %>
+            </div>
+          </div>
+          <div class="flex flex-1 p-2 teamMinHeight items-center justify-center">
+            <div class="teamWrap relative">
+              <div class="teamData mx-auto text-center rounded-b-lg">
+                <p class="text-blue-700 font-bold">Hugo Castilho</p>
+                <p class="text-gray-800 font-normal">Urologia</p>
+              </div>
+              <%= image_tag "team/hugo.jpg", class: "team mx-auto rounded-lg" %>
+            </div>
+          </div>
+          <div class="flex flex-1 p-2 teamMinHeight items-center justify-center">
+            <div class="teamWrap relative">
+              <div class="teamData mx-auto text-center rounded-b-lg">
+                <p class="text-blue-700 font-bold">João Bosco Santos</p>
+                <p class="text-gray-800 font-normal">Urologia</p>
+              </div>
+              <%= image_tag "team/joao.jpg", class: "team mx-auto rounded-lg" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row">
+          <div class="flex flex-1 p-2 teamMinHeight items-center justify-center">
+            <div class="teamWrap relative">
+              <div class="teamData mx-auto text-center rounded-b-lg">
+                <p class="text-blue-700 font-bold">Juliana Thomaz</p>
+                <p class="text-gray-800 font-normal">Fisioterapeuta</p>
+              </div>
+              <%= image_tag "team/juliana.jpg", class: "team mx-auto rounded-lg" %>
+            </div>
+          </div>
+          <div class="flex flex-1 p-2 teamMinHeight items-center justify-center">
+            <div class="teamWrap relative">
+              <div class="teamData mx-auto text-center rounded-b-lg">
+                <p class="text-blue-700 font-bold">Jussara Macedo</p>
+                <p class="text-gray-800 font-normal">Psiquiatria</p>
+              </div>
+              <%= image_tag "team/jussara.jpg", class: "team mx-auto rounded-lg" %>
+            </div>
+          </div>
+          <div class="flex flex-1 p-2 teamMinHeight items-center justify-center">
+            <div class="teamWrap relative">
+              <div class="teamData mx-auto text-center rounded-b-lg">
+                <p class="text-blue-700 font-bold">Renata Goveia</p>
+                <p class="text-gray-800 font-normal">Nutricionista</p>
+              </div>
+              <%= image_tag "team/renata.jpg", class: "team mx-auto rounded-lg" %>
+            </div>
+          </div>
+          <div class="flex flex-1 p-2 teamMinHeight items-center justify-center">
+            <div class="teamWrap relative">
+              <div class="teamData mx-auto text-center rounded-b-lg">
+                <p class="text-blue-700 font-bold">Roberto Campos</p>
+                <p class="text-gray-800 font-normal">Urologia</p>
+              </div>
+              <%= image_tag "team/roberto.jpg", class: "team mx-auto rounded-lg" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row">
+          <div class="flex flex-1 p-2 teamMinHeight items-center justify-center">
+            <div class="teamWrap relative">
+              <div class="teamData mx-auto text-center rounded-b-lg">
+                <p class="text-blue-700 font-bold">Raquel L. Peixoto</p>
+                <p class="text-gray-800 font-normal">Cirurgia Vascular</p>
+              </div>
+              <%= image_tag "team/raquel.jpg", class: "team mx-auto rounded-lg" %>
+            </div>
+          </div>
+          <div class="flex flex-1 p-2 teamMinHeight items-center justify-center">
+            <div class="teamWrap relative">
+              <div class="teamData mx-auto text-center rounded-b-lg">
+                <p class="text-blue-700 font-bold">Rosana S. Lucena</p>
+                <p class="text-gray-800 font-normal">Fisioterapeuta</p>
+              </div>
+              <%= image_tag "team/rosana.jpg", class: "team mx-auto rounded-lg" %>
+            </div>
+          </div>
+          <div class="flex flex-1 p-2 teamMinHeight items-center justify-center">
+            <div class="teamWrap relative">
+              <div class="teamData mx-auto text-center rounded-b-lg">
+                <p class="text-blue-700 font-bold">Stéphanie Cozzolino</p>
+                <p class="text-gray-800 font-normal">Endocrinologia</p>
+              </div>
+              <%= image_tag "team/stephanie.jpg", class: "team mx-auto rounded-lg" %>
+            </div>
+          </div>
+          <div class="flex flex-1 p-2 teamMinHeight items-center justify-center">
+            <div class="teamWrap relative">
+              <div class="teamData mx-auto text-center rounded-b-lg">
+                <p class="text-blue-700 font-bold">Virgínia L. Verde</p>
+                <p class="text-gray-800 font-normal">Psicóloga</p>
+              </div>
+              <%= image_tag "team/virginia.jpg", class: "team mx-auto rounded-lg" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row">
+          <div class="flex flex-1 p-2 teamMinHeight items-center justify-center hidden lg:block">
+          </div>
+          <div class="flex flex-1 p-2 teamMinHeight items-center justify-center">
+            <div class="teamWrap relative">
+              <div class="teamData mx-auto text-center rounded-b-lg">
+                <p class="text-blue-700 font-bold">Yung F. Castro</p>
+                <p class="text-gray-800 font-normal">Geriatria</p>
+              </div>
+              <%= image_tag "team/yung.jpg", class: "team mx-auto rounded-lg" %>
+            </div>
+          </div>
+          <div class="flex flex-1 p-2 teamMinHeight items-center justify-center">
+            <div class="teamWrap relative">
+              <div class="teamData mx-auto text-center rounded-b-lg">
+                <p class="text-blue-700 font-bold">Almir</p>
+                <p class="text-gray-800 font-normal">Administrativo</p>
+              </div>
+              <%= image_tag "team/almir.jpg", class: "team mx-auto rounded-lg" %>
+            </div>
+          </div>
+          <div class="flex flex-1 p-2 teamMinHeight items-center justify-center hidden lg:block">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="z-0 absolute left-0 bottom-0 overflow-hidden hidden lg:block">
+    <%= image_tag "bg-2.jpg", class: "opacity-50" %>
+  </div>
+</div>
+
+
+<div class="container lg:mx-auto mt-32 md:mt-40" id="Ambient">
+  <div class="flex flex-wrap px-4 mt-10 md:mt-0">
+    <div class="w-full">
+      <div class="lg:text-center mb-10">
+        <h2 class="font-bold text-3xl text-gray-800">Nossa Estrutura</h2>
+        <p class="font-light text-gray-500">Ambiente Confortável e de Qualidade</p>
+      </div>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><%= image_tag "ambient/1.jpg", size:"900", class: "rounded-lg shadow-md" %></div>
+          <div class="swiper-slide"><%= image_tag "ambient/2.jpg", size:"900", class: "rounded-lg shadow-md" %></div>
+          <div class="swiper-slide"><%= image_tag "ambient/3.jpg", size:"900", class: "rounded-lg shadow-md" %></div>
+          <div class="swiper-slide"><%= image_tag "ambient/4.jpg", size:"900", class: "rounded-lg shadow-md" %></div>
+          <div class="swiper-slide"><%= image_tag "ambient/5.jpg", size:"900", class: "rounded-lg shadow-md" %></div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="z-0 relative">
+  <div class="container lg:mx-auto mt-32 md:mt-40" id="Contact">
+    <div class="flex flex-wrap px-4 mt-10 md:mt-0 items-center justify-center relative z-20">
+      <div class="w-full">
+        <div class="lg:text-center mb-10">
+          <h2 class="font-bold text-3xl text-gray-800">Entre em Contato</h2>
+          <p class="font-light text-gray-500">Ficaremos Felizes em Ajudar</p>
+        </div>
+      </div>
+      <div class="flex-initial lg:mr-12">
+        <div class="shadow-xl" id="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.8604227712785!2d-43.37227448439635!3d-22.992159546704777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bdbcae9bea227%3A0x5dbe16f80f2046b8!2sAv.+Jorge+Curi%2C+550+-+Barra+da+Tijuca%2C+Rio+de+Janeiro+-+RJ%2C+22775-001!5e0!3m2!1spt-BR!2sbr!4v1560818854569!5m2!1spt-BR!2sbr" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="flex-initial mt-12 lg:ml-12 lg:mt-0">
+        <div class="flex">
+          <div class="flex-initial m-2">
+            <i data-feather="map-pin" class="iconColor"></i>
+          </div>
+          <div class="flex-initial m-2">
+            <p class="text-gray-600">
+              Av. Jorge Curi, 550 - Bloco A <br />
+              Barra da Tijuca - Rio de Janeiro/RJ<br />
+              CEP 22775-001
+            </p>
+          </div>
+        </div>
+        <div class="flex">
+          <div class="flex-initial m-2">
+            <i data-feather="phone" class="iconColor"></i>
+          </div>
+          <div class="flex-initial m-2">
+            <p class="text-gray-600">
+              (21) 2430-9050<br />
+              (21) 3444-5518
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-wrap px-4 mt-48 md:mt-64 mb-10 md:mb-20 items-center justify-center relative z-20">
+      <div class="flex-1">
+        <%= image_tag "logo.svg", size:"180", class: "w-40 lg:w-48" %>
+      </div>
+      <div class="flex-1">
+        <p class="text-right text-gray-600 lg:text-xl font-thin cursor-pointer" id="backToTop">
+          <i data-feather="arrow-up" class="iconColor inline-block"></i>
+          Voltar para cima
+        </p>
+      </div>
+    </div>
+    <div class="z-0 absolute right-0 bottom-0 overflow-hidden hidden lg:block">
+      <%= image_tag "bg-3.jpg", class: "opacity-50" %>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal z-40">
+  <div class="video-background"></div>
+  <div class="modal-content back">
+    <p class="text-right text-gray-600 lg:text-xl font-thin cursor-pointer"><i data-feather="arrow-left" class="iconColor inline-block"></i> Voltar</p>
+  </div>
+  <div class="modal-content img-raised">
+
+      <script src="https://fast.wistia.com/embed/medias/8n6rwc5b2e.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_8n6rwc5b2e videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/8n6rwc5b2e/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
+
+  </div>
+</div>
