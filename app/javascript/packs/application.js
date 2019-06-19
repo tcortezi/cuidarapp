@@ -29,8 +29,7 @@ document.addEventListener("turbolinks:load", () => {
   var html = document.documentElement;
   var toTop = document.querySelector('#backToTop')
   toTop.addEventListener('click', function() {
-    html.scrollTo({
-      top: 0,
+    html.scrollIntoView({
       behavior: 'smooth'
     })
   })
