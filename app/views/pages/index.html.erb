@@ -27,11 +27,11 @@
   </div>
   <div class="videoBg">
     <div class="w-full lg:hidden">
-      <%= video_tag "bgMobile.webm", type: "video/webm", controls: false, autoplay: true, loop: true, playsinline: true, preload: "auto", muted: "muted", class: "w-full vidHeight object-cover" %>
+      <%= video_tag(["bgMobile.webm", "bgMobile.mp4"], controls: false, autoplay: true, loop: true, playsinline: true, preload: "auto", muted: "muted", poster: "posterMobile.jpg", class: "w-full vidHeight object-cover", oncontextmenu: "return false;") %>
     </div>
     <div class="container mx-auto overflow-hidden">
       <div class="z-10 relative float-right hidden lg:block w-1/2">
-        <%= video_tag "bg.webm", type: "video/webm", controls: false, autoplay: true, loop: true, playsinline: true, preload: "auto", muted: "muted", class: "float-right" %>
+        <%= video_tag(["bg.webm", "bg.mp4"], controls: false, autoplay: true, loop: true, playsinline: true, preload: "auto", muted: "muted", poster: "posterDesktop.jpg", class: "float-right", oncontextmenu: "return false;") %>
       </div>
     </div>
   </div>
@@ -65,7 +65,7 @@
       <h2 class="font-bold text-3xl text-gray-800">Sobre a Cuidar</h2>
       <p class="font-light text-gray-500">O Melhor Lugar para Cuidar de Você</p>
       <p class="mt-10 font-light text-gray-600">
-        Todo ano surgem novos tratamentos e tecnologias medicinais, o que impressiona e aumenta a expectativa de vida. Porém, a forma que as clínicas atendem seus pacientes continua a mesma. Visita, diagnóstico, receita e repete. <br />A <strong>Cuidar</strong> foi criada com o propósito de evoluir esse modelo tradicional para uma forma mais moderna. Com uma equipe multidisciplinar, nosso desafio é entregar o que incluímos em nosso logo: Saúde, prevenção, reabilitação e reintegração.
+        Já reparou que de todos os avanços medicinais a única coisa que não mudou é a forma com que você é atendido? Visita, diagnóstico, receita e repete. A <strong>Cuidar</strong> nasceu com o propósito de inovar este modelo tradicional para uma forma mais moderna e humanizada de atendimento. Com uma equipe multidisciplinar, nosso desafio é entregar: Saúde, prevenção, reabilitação e reintegração. 
       </p>
     </div>
     <div class="w-full lg:w-1/2 lg:pl-16 mb-12 md:mb-0">
