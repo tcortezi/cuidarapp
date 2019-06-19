@@ -209,6 +209,22 @@ html {
   padding-top: 56.25%;
 }
 
+// iPhone hack
+*::-webkit-media-controls-panel {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+*::-webkit-media-controls-play-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+*::-webkit-media-controls-start-playback-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
 @media (min-width: 1024px) {
   .vidHeight {
     height: unset;

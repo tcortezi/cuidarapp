@@ -27,11 +27,11 @@
   </div>
   <div class="videoBg">
     <div class="w-full lg:hidden">
-      <%= video_tag(["bgMobile.webm", "bgMobile.mp4"], controls: false, autoplay: true, loop: true, playsinline: true, preload: "auto", muted: "muted", poster: "posterMobile.jpg", class: "w-full vidHeight object-cover", oncontextmenu: "return false;") %>
+      <%= video_tag(["bgMobile.mp4", "bgMobile.webm"], type: "video/mp4", controls: false, autoplay: true, loop: true, playsinline: true, preload: "auto", muted: "muted", poster: "posterMobile.jpg", class: "w-full vidHeight object-cover", oncontextmenu: "return false;") %>
     </div>
     <div class="container mx-auto overflow-hidden">
       <div class="z-10 relative float-right hidden lg:block w-1/2">
-        <%= video_tag(["bg.webm", "bg.mp4"], controls: false, autoplay: true, loop: true, playsinline: true, preload: "auto", muted: "muted", poster: "posterDesktop.jpg", class: "float-right", oncontextmenu: "return false;") %>
+        <%= video_tag(["bg.webm", "bg.mp4"], type: "video/mp4", controls: false, autoplay: true, loop: true, playsinline: true, preload: "auto", muted: "muted", poster: "posterDesktop.jpg", class: "float-right", oncontextmenu: "return false;") %>
       </div>
     </div>
   </div>
